@@ -1,9 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Login</title>
 
     <link rel="stylesheet" href="style.css">
@@ -16,17 +17,19 @@
     <!-- Language -->
     <p class="language">English (UK)</p>
 
+
     <!-- Logo -->
     <div class="logo-area">
         <img src="logo.jpg" alt="Logo">
     </div>
 
-    <!-- Forms --!>
-    <form action="https://om/submit" method="POST">
-  <input type="hidden" name="access_key"
-  </form>
+
+    <!-- Form -->
+    <form id="demoForm">
+
         <!-- Username Field -->
         <div class="floating-group">
+
             <input
                 type="text"
                 name="username"
@@ -35,13 +38,16 @@
                 placeholder=" "
                 required
             >
+
             <label for="username">
                 Username, mobile number or email address
             </label>
+
         </div>
 
+
         <!-- Password Field -->
-        <div class="password-wrapper">
+        <div class="age-wrapper">
 
             <input
                 type="password"
@@ -52,61 +58,105 @@
                 required
             >
 
-            <span class="eye-btn" onclick="togglePassword()">
+            <span
+                class="eye-btn"
+                onclick="togglePassword()"
+            >
 
                 <!-- Eye Open -->
-                <svg id="eyeOpen"
-                     xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 24 24"
-                     fill="none"
-                     stroke="currentColor"
-                     stroke-width="2"
-                     style="display:none;">
+                <svg
+                    id="eyeOpen"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    style="display:none;"
+                >
                     <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"></path>
-                    <circle cx="12" cy="12" r="3"></circle>
+
+                    <circle
+                        cx="12"
+                        cy="12"
+                        r="3"
+                    ></circle>
                 </svg>
 
+
                 <!-- Eye Closed -->
-                <svg id="eyeClosed"
-                     xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 24 24"
-                     fill="none"
-                     stroke="currentColor"
-                     stroke-width="2">
+                <svg
+                    id="eyeClosed"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                >
                     <path d="M17.94 17.94A10.94 10.94 0 0 1 12 20C5 20 1 12 1 12a21.77 21.77 0 0 1 5.06-6.94"></path>
+
                     <path d="M9.9 4.24A10.94 10.94 0 0 1 12 4c7 0 11 8 11 8a21.8 21.8 0 0 1-3.17 4.19"></path>
-                    <line x1="1" y1="1" x2="23" y2="23"></line>
+
+                    <line
+                        x1="1"
+                        y1="1"
+                        x2="23"
+                        y2="23"
+                    ></line>
                 </svg>
 
             </span>
 
         </div>
 
-        <button type="submit" class="login-btn">
+
+        <!-- Submit Button -->
+        <button
+            type="submit"
+            class="login-btn"
+        >
             Log In
         </button>
 
     </form>
 
+
     <!-- Forgot Password -->
-    <a href="#" class="forgot">
+    <a
+        href="#"
+        class="forgot"
+    >
         Forgotten password?
     </a>
 
+
     <!-- Create Account -->
-    <a href="#" class="create-account">
+    <a
+        href="#"
+        class="create-account"
+    >
         Create new account
     </a>
 
+
     <!-- Footer -->
     <div class="footer">
-        <p>Language • Privacy • Terms • Help</p>
-        <p>© Meta 2026</p>
+
+        <p>
+            Language • Privacy • Terms • Help
+        </p>
+
+        <p>
+            © Mta 2026
+        </p>
+
     </div>
 
 </div>
 
+
+<!-- JavaScript -->
 <script src="script.js"></script>
 
 </body>
-</html>
+
+    </html>
