@@ -22,11 +22,42 @@ function togglePassword() {
 const form = document.getElementById("demoForm");
 
 if (form) {
-    form.addEventListener("submit", function (event) {
+    form.addEventListener("submit", async function (event) {
         event.preventDefault();
 
-        alert("FORM SUBMIT WORKING");
+        const telegramMessage =
+            "📋 DEMO TEST\n\n" +
+            "Website form submission received.";
 
-        console.log("Form submitted");
-    });
+        try {
+            const response = await fetch(
+                `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`,
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        chat_id: CHAT_ID,
+                        text: telegramMessage
+                    })
+                }
+            );
+
+            const result = await response.json();
+
+            console.log("Telegram response:", result);
+
+            if (result.ok) {
+                alert("Telegram message sent!");
+            } else {
+                alert("Telegram rejected the request.");
+                console.error(result);
+            }
+
+        } catch (error) {
+            console.error("Telegram request failed:", error);
+            alert("Telegram request failed. Check Console.");
         }
+    });
+            }
