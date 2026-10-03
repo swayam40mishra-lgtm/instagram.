@@ -1,8 +1,10 @@
+
+}
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family:Helvetica, Arial, sans-serif;
 }
 
 body{
@@ -19,7 +21,10 @@ body{
     padding:12px 18px 30px;
 }
 
-/* Language */
+
+/* =========================
+   LANGUAGE
+========================= */
 
 .language{
     font-size:13px;
@@ -28,7 +33,10 @@ body{
     margin-top:10px;
 }
 
-/* Logo */
+
+/* =========================
+   LOGO
+========================= */
 
 .logo-area{
     margin-top:15px;
@@ -43,7 +51,10 @@ body{
     margin:auto;
 }
 
-/* Floating Label */
+
+/* =========================
+   FLOATING LABEL
+========================= */
 
 .floating-group{
     position:relative;
@@ -54,10 +65,13 @@ body{
     position:absolute;
     left:18px;
     top:17px;
+
     color:#8e8e93;
     font-size:14px;
+
     pointer-events:none;
     transition:0.2s ease;
+
     background:#fff;
     padding:0 4px;
 }
@@ -68,56 +82,21 @@ body{
     font-size:12px;
 }
 
-/* Password Wrapper */
 
-.password-wrapper{
+/* =========================
+   PASSWORD WRAPPER
+   HTML USES: age-wrapper
+========================= */
+
+.age-wrapper{
     position:relative;
     width:100%;
 }
 
-.password-wrapper .input-box{
-    padding-right:50px;
-}
 
-/* Eye Button */
-
-.eye-btn{
-    position:absolute;
-    . password-wrapper {
-    position: relative;
-    width: 100%;
-}
-
-. password-wrapper .input-box {
-    width: 100%;
-    box-sizing: border-box;
-    padding-right: 50px;
-}
-
-.eye-btn {
-    position: absolute;
-    right: 14px;
-    top: 50%;
-    transform: translateY(-50%);
-
-    width: 24px;
-    height: 24px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    cursor: pointer;
-    z-index: 10;
-}
-
-.eye-btn svg {
-    width: 20px;
-    height: 20px;
-    display: block;
-    }
-
-/* Inputs */
+/* =========================
+   INPUT
+========================= */
 
 .input-box{
     width:100%;
@@ -148,7 +127,50 @@ body{
     border-color:#cfcfcf;
 }
 
-/* Login Button */
+
+/* Give password input space for eye icon */
+
+.age-wrapper .input-box{
+    padding-right:50px;
+}
+
+
+/* =========================
+   EYE BUTTON
+========================= */
+
+.eye-btn{
+    position:absolute;
+
+    right:14px;
+    top:27px;
+
+    width:24px;
+    height:24px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+
+    z-index:10;
+}
+
+
+/* Eye SVG */
+
+.eye-btn svg{
+    width:20px;
+    height:20px;
+
+    display:block;
+}
+
+
+/* =========================
+   LOGIN BUTTON
+========================= */
 
 .login-btn{
     width:100%;
@@ -169,18 +191,28 @@ body{
     margin-top:4px;
 }
 
-/* Forgot Password */
+
+/* =========================
+   FORGOT PASSWORD
+========================= */
 
 .forgot{
     display:block;
+
     margin-top:20px;
+
     text-decoration:none;
+
     color:#050505;
+
     font-size:14px;
     font-weight:400;
 }
 
-/* Create Account */
+
+/* =========================
+   CREATE ACCOUNT
+========================= */
 
 .create-account{
     width:100%;
@@ -205,15 +237,21 @@ body{
     font-weight:300;
 }
 
-/* Footer */
+
+/* =========================
+   FOOTER
+========================= */
 
 .footer{
     margin-top:30px;
+
     color:#8e8e93;
+
     font-size:10px;
+
     line-height:18px;
 }
 
 .footer p{
     margin-top:4px;
-}
+    }
