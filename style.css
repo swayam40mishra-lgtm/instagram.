@@ -83,25 +83,39 @@ body{
 
 .eye-btn{
     position:absolute;
-    right:16px;
-    top:50%;
-    transform:translateY(-50%);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    cursor:pointer;
-    color:#8e8e8e;
-    z-index:10;
+    . password-wrapper {
+    position: relative;
+    width: 100%;
 }
 
-.eye-btn:hover{
-    color:#555;
+. password-wrapper .input-box {
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 50px;
 }
 
-.eye-btn svg{
-    width:22px;
-    height:22px;
+.eye-btn {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    z-index: 10;
 }
+
+.eye-btn svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+    }
 
 /* Inputs */
 
