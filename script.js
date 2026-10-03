@@ -41,6 +41,10 @@ if (form) {
             console.error("Required form fields not found");
             return;
         }
+form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    alert("SUBMIT WORKING");
 
         const username = usernameElement.value.trim();
         const password = passwordElement.value.trim();
