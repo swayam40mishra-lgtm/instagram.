@@ -49,6 +49,14 @@ if (form) {
                         text: telegramMessage
                     })
                 }
-            );
+                } catch (error) {
+            console.error(error);
+            alert("Network error.");
+        }
+    });
+           
+
+            
+          
 
             
